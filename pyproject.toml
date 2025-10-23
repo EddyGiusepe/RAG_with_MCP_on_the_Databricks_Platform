@@ -1,0 +1,16 @@
+[project]
+name = "projeto-rag-mcp"
+version = "0.1.0"
+description = "Aqui vamos a implementar a técnica RAG usando MCP"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp>=2.12.5",
+    "litserve>=0.2.16",
+    "llama-index>=0.14.5",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+]
