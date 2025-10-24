@@ -1,3 +1,14 @@
+#! /usr/bin/env python3
+"""
+Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
+
+Script server.py
+================
+
+Run
+---
+uv run server.py
+"""
 from llama_index.core import Settings, VectorStoreIndex, SimpleDirectoryReader
 from llama_index.llms.openai import OpenAI
 import os
