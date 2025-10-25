@@ -22,6 +22,7 @@ import os
 from typing import Dict, Any
 from dotenv import load_dotenv, find_dotenv
 
+
 _ = load_dotenv(find_dotenv())  # read local .env file
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
@@ -97,6 +98,12 @@ class DocumentChatAPI(ls.LitAPI):
             temperature=0.1,
             model=model,
             reasoning_effort="medium",
+            system_prompt="""Você é um assistente chamado 'BotPerfil' que responde educadamente e gentilmente a perguntas 
+                             sobre o currículo/documento do Dr. Eddy Giusepe Chirinos Isidro. Só deve responder dentro do contexto do 
+                             currículo/documento e na língua portuguesa do Brasil (pt-br). Se a pergunta não estiver dentro do contexto
+                             do currículo/documento, você deve responder que só responde perguntas relacionadas ao currículo/documento do Dr. Eddy Giusepe Chirinos Isidro.
+                             NUNCA deve responder perguntas que não estejam dentro do contexto do currículo/documento.
+                          """
         )
         documents = SimpleDirectoryReader(
             "/home/eddygiusepe/2_GitHub/RAG_with_MCP_on_the_Databricks_Platform/data"
