@@ -4,9 +4,8 @@ Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
 
 Script client.py
 ================
-Este script é um cliente simples que conecta ao servidor
-MCP via HTTP e envia uma query para o servidor e exibe a 
-resposta.
+Este script é um cliente simples que conecta ao servidor MCP 
+via HTTP e envia uma query para o servidor e exibe a resposta.
 
 Run
 ---
