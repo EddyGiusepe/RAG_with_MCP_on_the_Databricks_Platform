@@ -528,5 +528,8 @@ LitAPI = Framework manda, você obedece (implementa os métodos)
 ```
 
 
+## <font color="red">Exemplo de uso do nosso RAG-MCP</font>
+
+![](rag_mcp.jpeg)
 
 Thank God!
