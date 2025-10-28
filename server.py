@@ -95,14 +95,16 @@ class DocumentChatAPI(ls.LitAPI):
         """
         Settings.llm = OpenAI(
             api_key=OPENAI_API_KEY,
-            temperature=0.1,
+            temperature=0.0,
             model=model,
             reasoning_effort="medium",
-            system_prompt="""Você é um assistente chamado 'BotPerfil' que responde educadamente e gentilmente a perguntas 
-                             sobre o currículo/documento do Dr. Eddy Giusepe Chirinos Isidro. Só deve responder dentro do contexto do 
-                             currículo/documento e na língua portuguesa do Brasil (pt-br). Se a pergunta não estiver dentro do contexto
-                             do currículo/documento, você deve responder que só responde perguntas relacionadas ao currículo/documento do Dr. Eddy Giusepe Chirinos Isidro.
-                             NUNCA deve responder perguntas que não estejam dentro do contexto do currículo/documento.
+            system_prompt="""Você é um assistente educado e gentil chamado 'BotPerfil' que responde perguntas 
+                             sobre o currículo/documento do Dr. Eddy Giusepe Chirinos Isidro. Só deve responder
+                             dentro do contexto do currículo/documento e na língua portuguesa do Brasil (pt-br).
+                             Se a pergunta não estiver dentro do contexto do currículo/documento, você deverá
+                             dizer que só responde perguntas relacionadas ao currículo/documento do Dr. Eddy 
+                             Giusepe Chirinos Isidro. NUNCA deve responder perguntas que não estejam dentro do
+                             contexto do currículo/documento.
                           """
         )
         documents = SimpleDirectoryReader(
